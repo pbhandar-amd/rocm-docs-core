@@ -17,12 +17,17 @@ on:
         target-branch:
           required: true
           type: string
-          description: Target branch to merge [SOURCE_BRANCH] from [SOURCE_REPO] into.   
+          description: Target branch to merge [SOURCE_BRANCH] from [SOURCE_REPO] into.
+        env-name:
+          required: true
+          type: string
+          description: Github environment name that your github token secret is in
     secrets:
         github-token:
           required: true
 jobs:
   Promote:
+    environment: ${{ inputs.env-name }}
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
