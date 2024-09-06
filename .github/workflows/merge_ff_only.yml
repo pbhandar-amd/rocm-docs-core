@@ -1,7 +1,7 @@
 name: Merge (ff only)
 on:
   workflow_dispatch:
-  workflow_call:
+  #workflow_call:
     inputs:
         source-repo:
           required: true
