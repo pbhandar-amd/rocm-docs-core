@@ -20,7 +20,7 @@ on:
           type: string
           description: Target branch to merge [SOURCE_BRANCH] from [SOURCE_REPO] into.
         env-name:
-          required: true
+          required: false
           type: string
           description: Github environment name that your github token secret is in
     secrets:
